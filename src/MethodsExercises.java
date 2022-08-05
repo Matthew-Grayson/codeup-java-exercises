@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 public class MethodsExercises {
     public static void main(String[] args) {
         System.out.println(add(10, 6));
@@ -12,7 +14,7 @@ public class MethodsExercises {
         int userInput = getInteger(1, 10, intScan.nextInt());
         System.out.println(userInput);
         long factorial = getFactorial(userInput);
-        System.out.println(factorial);
+        System.out.printf("%s! = %s%n", userInput, factorial);
         Scanner diceType = new Scanner(System.in);
         System.out.print("Enter number of sides for dice: ");
         rollDice(diceType.nextInt());
@@ -24,13 +26,14 @@ public class MethodsExercises {
         } else {
             Scanner intScan = new Scanner(System.in);
             System.out.print("Try again. Enter a number between 1 and 10: ");
-            return getInteger(1, 10, intScan.nextInt());
+            return getInteger(min, max, intScan.nextInt());
         }
     }
 
     public static void rollDice(int sides) {
-        System.out.println(Math.floor(Math.random() * (sides)) + 1);
-        System.out.println(Math.floor(Math.random() * (sides)) + 1);
+        System.out.println("Your dice rolls:");
+        System.out.format("%.0f%n", Math.floor(Math.random() * sides) + 1);
+        System.out.format("%.0f%n", Math.floor(Math.random() * sides) + 1);
     }
 
     public static int add(int num1, int num2) {
