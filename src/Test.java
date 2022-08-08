@@ -1,11 +1,7 @@
-public class Test {
+class Test {
     public static void main(String[] args) {
-        int[] testArray = new int[101];
-        int[] nums = {1,1,1,1};
-        System.out.print(nums);
-        for(int n: nums) {
-            testArray[n]++;
-        }
-        System.out.println(testArray);
-    }
-}
+        int x = 5;
+        int y = 6;
+        String z = "g";
+        System.out.println(x + z + y);
+    }}
