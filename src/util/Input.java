@@ -4,60 +4,54 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Input {
-    private String scanner;
-    public static void main(String[] args) {
+    private Scanner scanner = new Scanner(System.in);
+    public void main(String[] args) {
 
     }
-    public static String getString() {
-        Scanner scanner = new Scanner(System.in);
+    public String getString() {
         System.out.print("Type something: ");
         return ("You typed: " + scanner.nextLine());
     }
-    public static boolean yesNo() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Type something truthy: ");
+    public boolean yesNo() {
+        System.out.print("Would you like to continue? ");
         String userInput = scanner.nextLine();
         return Objects.equals(userInput, "true") ||
                 Objects.equals(userInput, "yes") ||
                 Objects.equals(userInput, "y") ||
                 Objects.equals(userInput, "Y");
     }
-    public static int getInt(int min, int max) {
-        int userInput = min - 1;
+    public int getInt(int min, int max) {
+        int userInput;
         do {
-            Scanner scanner = new Scanner(System.in);
             System.out.printf("Enter an integer between %s and %s: ", min, max);
             userInput = scanner.nextInt();
-        } while (userInput <= min || userInput >= max);
+        } while (userInput < min || userInput > max);
         return userInput;
     }
 
-    public static int getInt() {
-        int userInput = 0;
-        while (userInput <= 1 || userInput >= 5) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter an integer between 1 and 5: ");
+    public int getInt() {
+        int userInput;
+        do  {
+            System.out.println("Enter an integer between 1 and 100: ");
             userInput = scanner.nextInt();
-        }
+        } while(userInput < 1 || userInput > 100);
         return userInput;
     }
 
-    public static double getDouble(double min, double max) {
-        double userInput = min - 1;
-        while (userInput <= min || userInput >= max) {
-            Scanner scanner = new Scanner(System.in);
+    public double getDouble(double min, double max) {
+        double userInput;
+        do {
             System.out.printf("Enter a number between %s and %s: ", min, max);
             userInput = scanner.nextDouble();
-        }
+        } while(userInput < min || userInput > max);
         return userInput;
     }
-    public static double getDouble() {
-        double userInput = 0;
-        while (userInput <= 1 || userInput >= 5) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter a number between 1 and 5: ");
+    public double getDouble() {
+        double userInput;
+        do {
+            System.out.print("Enter a number between 1 and 100: ");
             userInput = scanner.nextDouble();
-        }
+        } while(userInput < 1 || userInput > 100);
         return userInput;
     }
 }
