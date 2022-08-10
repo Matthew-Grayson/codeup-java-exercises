@@ -3,7 +3,7 @@ import java.util.Arrays;
 class Test {
     public static void main(String[] args) {
         int[] count = new int[10];
-        int[] nums = {8,1,2,2,3};
+        int[] nums = {8,1,2,0,3};
         int[] res = new int[nums.length];
         for(int i = 0; i < nums.length; i++) {
             count[nums[i]]++;
