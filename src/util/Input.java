@@ -47,6 +47,13 @@ public class Input {
         } while(userInput < min || userInput > max);
         return userInput;
     }
+    public double getDouble(String prompt) {
+        double userInput;
+        System.out.println(prompt);
+        userInput = scanner.nextDouble();
+        scanner.nextLine();
+        return userInput;
+    }
     public double getDouble() {
         double userInput;
         do {
