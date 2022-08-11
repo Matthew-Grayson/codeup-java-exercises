@@ -3,6 +3,7 @@ package movies;
 import util.Input;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 import static movies.MoviesArray.findAll;
 
@@ -71,5 +72,48 @@ public class MoviesApplication {
                     Enter your choice:\s"""
             ));
         }
+//        switch(userChoice) {
+//            case 0:
+//                System.exit(0);
+//                break;
+//            case 1:
+//                for(Movie movie : findAll()) {
+//                    System.out.println(movie);
+//                }
+//                break;
+//            case 2:
+//                for(Movie movie : findAll()) {
+//                    if(Objects.equals(movie.getCategory(), "animated")) {
+//                        System.out.println(movie);
+//                    }
+//                }
+//                break;
+//            case 3:
+//                for(Movie movie : findAll()) {
+//                    if(Objects.equals(movie.getCategory(), "drama")) {
+//                        System.out.println(movie);
+//                    }
+//                }
+//                break;
+//            case 4:
+//                for(Movie movie : findAll()) {
+//                    if(Objects.equals(movie.getCategory(), "horror")) {
+//                        System.out.println(movie);
+//                    }
+//                }
+//                break;
+//            case 5:
+//                for(Movie movie : findAll()) {
+//                    if(Objects.equals(movie.getCategory(), "scifi")) {
+//                        System.out.println(movie);
+//                    }
+//                }
+//                break;
+//            default:
+//                Scanner scanner = new Scanner(System.in);
+//                System.out.println("Invalid input. Please enter a valid choice: ");
+//                displayMovies(scanner.nextInt());
+//                break;
+//        }
     }
 }
