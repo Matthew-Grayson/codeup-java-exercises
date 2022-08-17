@@ -12,6 +12,10 @@ public class Input {
         System.out.print("Type something: ");
         return ("You typed: " + scanner.nextLine());
     }
+    public String getString(String prompt) {
+        System.out.print(prompt);
+        return ("You typed: " + scanner.nextLine());
+    }
     public String getString(String prompt, String var) {
         System.out.format(prompt, var);
         return (scanner.nextLine());
@@ -31,6 +35,15 @@ public class Input {
             userInput = scanner.nextInt();
         } while (userInput < min || userInput > max);
         return userInput;
+    }
+    public int getInt(String prompt) {
+//        System.out.print(prompt);
+        //set input to var first
+        try {
+            return Integer.valueOf(getString(prompt));
+        } catch (NumberFormatException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public int getInt() {
