@@ -7,19 +7,16 @@ import java.util.HashMap;
 public class Student {
     private String name;
     private ArrayList<Integer> grades;
-    private HashMap<String, Student> student;
     private HashMap<String, String> attendance;
 
-    public Student(String name, ArrayList<Integer> grades, HashMap<String, Student> student) {
+    public Student(String name, ArrayList<Integer> grades) {
         this.name = name;
         this.grades = grades;
-        this.student = student;
     }
 
-    public Student(String name, ArrayList<Integer> grades, HashMap<String, Student> student, HashMap<String, String> attendance) {
+    public Student(String name, ArrayList<Integer> grades, HashMap<String, String> attendance) {
         this.name = name;
         this.grades = grades;
-        this.student = student;
         this.attendance = attendance;
     }
 

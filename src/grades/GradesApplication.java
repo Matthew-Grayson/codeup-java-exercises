@@ -9,6 +9,7 @@ public class GradesApplication {
     public static void main(String[] args) {
         HashMap students = populateHashMap();
         displayMenu(students);
+//        System.out.println(students);
     }
     public static String usernamesToString(HashMap students) {
         String usernames = "";
@@ -42,7 +43,7 @@ public class GradesApplication {
     }
     public static HashMap<String, Student> populateHashMap() {
         HashMap<String, Student> students = new HashMap<>();
-        Student matthew = new Student("Matthew", new ArrayList<>(), new HashMap<>(), new HashMap<>());
+        Student matthew = new Student("Matthew", new ArrayList<>(), new HashMap<>());
         matthew.addGrade(98);
         matthew.addGrade(100);
         matthew.addGrade(100);
@@ -52,7 +53,7 @@ public class GradesApplication {
         matthew.recordAttendance("2022-08-04", "P");
         matthew.recordAttendance("2022-08-05", "P");
         matthew.recordAttendance("2022-08-08", "P");
-        Student james = new Student("James", new ArrayList<>(), new HashMap<>(), new HashMap<>());
+        Student james = new Student("James", new ArrayList<>(), new HashMap<>());
         james.addGrade(96);
         james.addGrade(100);
         james.addGrade(97);
@@ -62,7 +63,7 @@ public class GradesApplication {
         james.recordAttendance("2022-08-04", "P");
         james.recordAttendance("2022-08-05", "P");
         james.recordAttendance("2022-08-08", "P");
-        Student caleb = new Student("Caleb", new ArrayList<>(), new HashMap<>(), new HashMap<>());
+        Student caleb = new Student("Caleb", new ArrayList<>(), new HashMap<>());
         caleb.addGrade(99);
         caleb.addGrade(99);
         caleb.addGrade(98);
@@ -72,7 +73,7 @@ public class GradesApplication {
         caleb.recordAttendance("2022-08-04", "P");
         caleb.recordAttendance("2022-08-05", "P");
         caleb.recordAttendance("2022-08-08", "P");
-        Student boss = new Student("Boss", new ArrayList<>(), new HashMap<>(), new HashMap<>());
+        Student boss = new Student("Boss", new ArrayList<>(), new HashMap<>());
         boss.addGrade(11);
         boss.addGrade(24);
         boss.addGrade(29);
